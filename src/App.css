@@ -13,7 +13,6 @@ html {
 
 div {
 	display:block;
-	width:1000px;
 	margin:0 auto;
 	font-family:'Roboto', sans-serif;
 	font-size:14px;
@@ -21,9 +20,15 @@ div {
 }
 
 .search div {
+	display:flex;
+	justify-content:space-around;
 	margin-bottom:20px;
 	padding:10px;
 	background-color:rgb(37,41,46);
+}
+
+.search ol {
+	margin-left:210px;
 }
 
 .search ol li {
@@ -47,6 +52,29 @@ div {
 	border-color:transparent;
 	border-radius:5px;
 	outline:0;
+}
+
+.search ul {
+	margin-right:210px;
+}
+
+.search ul li {
+	display:inline-block;
+	margin-left:20px;
+	font-size:16px;
+	color:white;
+	list-style:none;
+	vertical-align:-10px;
+}
+
+.search ul li img {
+	width:20px;
+	vertical-align:-5px;
+	border-radius:5px;
+}
+
+.main div {
+	width:1000px;
 }
 
 .user div {
@@ -86,6 +114,11 @@ div {
 	margin-bottom:10px;
 	overflow:hidden;
 	text-overflow:ellipsis;
+}
+
+.user p a {
+	text-decoration:none;
+	color:rgb(18,105,211);
 }
 
 .repos div {
@@ -146,8 +179,12 @@ div {
 	font-size:21px;
 	font-weight:bold;
 	border-bottom:1px solid rgb(209,213,218);
-	color:rgb(18,105,211);
 	list-style:none;
+}
+
+.repos ul li a {
+	text-decoration:none;
+	color:rgb(18,105,211);
 }
 
 .info div {

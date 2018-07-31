@@ -13,11 +13,13 @@ class Profile extends Component {
         <div className="search">
           <Search />
         </div>
-        <div className="user">
-          <User />
-        </div>
-        <div className="repos">
-          <Repos />
+        <div className="main">
+          <div className="user">
+            <User />
+          </div>
+          <div className="repos">
+            <Repos />
+          </div>
         </div>
         <div className="info">
           <Info />

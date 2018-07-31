@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
+import {getUser} from './actions/github'
+import {connect} from 'react-redux'
 
 class Search extends Component {
+  componentDidMount() {
+    getUser()
+  }
+
   render() {
     return (
     	<div>
@@ -16,9 +22,22 @@ class Search extends Component {
           <li>Marketplace</li>
           <li>Explore</li>
         </ol>
+        <ul>
+          <li><i className="fa fa-bell"></i></li>
+          <li><i className="fa fa-plus"></i></li>
+          <li><img src={this.props.user.avatar_url} alt="" /></li>
+        </ul>
       </div>
     )
   }
 }
 
-export default Search
+Search.defaultProps = {
+  user:{}
+}
+
+function mapStateToProps(state) {
+  return {user:state.user}
+}
+
+export default connect(mapStateToProps)(Search)

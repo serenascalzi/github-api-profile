@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {getRepos} from './actions/github'
-/*import {Link} from 'react-router-dom'*/
 import {connect} from 'react-redux'
 
 class Repos extends Component {
@@ -39,7 +38,7 @@ class Repos extends Component {
         </form>
         <ul>
         {this.props.repos.map(repo => (
-          <li key={repo.id}>{repo.name}</li>
+          <li key={repo.id}><a href={repo.html_url}>{repo.name}</a></li>
         ))
         }
         </ul>

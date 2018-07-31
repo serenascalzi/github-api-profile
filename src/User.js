@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {getUser} from './actions/github'
-/*import {Link} from 'react-router-dom'*/
 import {connect} from 'react-redux'
 
 class User extends Component {
@@ -16,8 +15,8 @@ class User extends Component {
         <h2>{this.props.user.login}</h2>
         <h3>{this.props.user.bio}</h3>
         <p>{this.props.user.location}</p>
-        <p>{this.props.user.blog}</p>
-        <p>{this.props.user.email}</p>
+        <p><a href={this.props.user.blog}>{this.props.user.blog}</a></p>
+        <p><a href={`mailto:${this.props.user.email}`}>{this.props.user.email}</a></p>
       </div>
     )
   }
